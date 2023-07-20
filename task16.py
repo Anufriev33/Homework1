@@ -8,23 +8,26 @@
 #Решение :
 
 
-# list_1 = [1, 2, 3, 4, 5]
-# # k = 3
-# # count = 0
-# # for num in list_1:
-# #     if num == k:
-# #         count += 1
-# # print(f"Число {k} встречается в массиве {count} раз.")
-
-
-
 list_1 = [1, 2, 3, 4, 5]
 k = 3
 count = 0
-
-for i in range(len(list_1)):
-    if list_1[i] == k:
+for i in list_1:
+    if i == k:
         count += 1
+print(f"Число {k} встречается в массиве {count} раз.")
 
-print(count)
+
+
+# Решение через range :
+
+
+# list_1 = [1, 2, 3, 4, 5]
+# k = 3
+# count = 0
+
+# for i in range(len(list_1)):
+#     if list_1[i] == k:
+#         count += 1
+
+# print(count)
 
