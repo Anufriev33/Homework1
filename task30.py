@@ -10,13 +10,32 @@
 # Решение :
 
 
+# a1 = int(input("Введите первый элемент: "))
+# d = int(input("Введите разность: "))
+# n = int(input("Введите количество элементов: "))
+
+# progression = []
+# for i in range(n):
+#     an = a1 + i * d
+#     progression.append(an)
+
+# print("Арифметическая прогрессия:", progression)
+
+
+
+# Решение с помощью функции :
+
+
+def arithmetic_progression(a1, d, n):
+    progression = []
+    for i in range(n):
+        an = a1 + i * d
+        progression.append(an)
+    return progression
+
 a1 = int(input("Введите первый элемент: "))
 d = int(input("Введите разность: "))
 n = int(input("Введите количество элементов: "))
 
-progression = []
-for i in range(n):
-    an = a1 + i * d
-    progression.append(an)
-
+progression = arithmetic_progression(a1, d, n)
 print("Арифметическая прогрессия:", progression)
