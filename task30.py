@@ -7,7 +7,7 @@
 # Каждое число вводится с новой строки.
 
 
-# Решение :
+# Решение c применением цикла :
 
 
 # a1 = int(input("Введите первый элемент: "))
@@ -23,19 +23,19 @@
 
 
 
-# Решение с помощью функции :
+# Решение с применением функции :
 
 
-def arithmetic_progression(a1, d, n):
-    progression = []
-    for i in range(n):
-        an = a1 + i * d
-        progression.append(an)
-    return progression
+# def arithmetic_progression(a1, d, n):
+#     progression = []
+#     for i in range(n):
+#         an = a1 + i * d
+#         progression.append(an)
+#     return progression
 
-a1 = int(input("Введите первый элемент: "))
-d = int(input("Введите разность: "))
-n = int(input("Введите количество элементов: "))
+# a1 = int(input("Введите первый элемент: "))
+# d = int(input("Введите разность: "))
+# n = int(input("Введите количество элементов: "))
 
-progression = arithmetic_progression(a1, d, n)
-print("Арифметическая прогрессия:", progression)
+# progression = arithmetic_progression(a1, d, n)
+# print("Арифметическая прогрессия:", progression)
