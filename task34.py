@@ -12,3 +12,31 @@
 # Решение :
 
 
+def check_rhythm(poem):
+    phrases = poem.split(' ')  # Разделение стихотворения на фразы
+
+    vowel_count = None  # Количество гласных букв в текущей фразе
+
+    for phrase in phrases:
+        # Разделение фразы на слова
+        words = phrase.split('-')
+
+        # Получение количества гласных букв в текущей фразе
+        current_count = sum(word.count(vowel) for word in words for vowel in 'ауоыиэёеяю')
+
+        # Если это первая фраза, устанавливаем количество гласных букв
+        if vowel_count is None:
+            vowel_count = current_count
+            continue
+
+        # Если количество гласных букв отличается, выводим "Пам парам" и завершаем функцию
+        if current_count != vowel_count:
+            return 'Пам парам'
+
+    # Если количество гласных букв в каждой фразе одинаковое, выводим "Парам пам-пам"
+    return 'Парам пам-пам'
+
+
+poem = input("Введите стихотворение Винни-Пуха: ")
+result = check_rhythm(poem)
+print(result)
